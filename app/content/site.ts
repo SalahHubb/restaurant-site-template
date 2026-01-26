@@ -11,7 +11,7 @@ export type Testimonial = {
 };
 export type Social = { label: string; href: string; Icon: ElementType };
 
-export const BRAND = { name: "restaurant", icon: "\uD83C\uDF5C" };
+export const BRAND = { name: "Demo-restaurant", icon: "\uD83C\uDF5C" };
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "#" },
@@ -80,7 +80,6 @@ export const SOCIALS: Social[] = [
   { label: "Twitter", href: "#", Icon: Twitter },
 ];
 
-export const USEFUL_LINKS = ["About us", "Gallery", "Contact"];
 export const HELP_LINKS = ["Terms & Conditions", "Privacy"];
 export const POLICY_LINKS = ["Terms of Use", "Privacy Policy"];
 export const OPENING_HOURS = {
