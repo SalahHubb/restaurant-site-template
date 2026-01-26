@@ -38,12 +38,14 @@ export function TestimonialsSection() {
 
         <div className="md:overflow-x-auto md:pb-4">
           <div className="flex flex-col gap-8 md:min-w-max md:flex-row">
-            {TESTIMONIALS.map((testimonial) => {
-              const testimonialId = `${testimonial.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-title`;
+            {TESTIMONIALS.map((testimonial, index) => {
+              const testimonialId = `${testimonial.name
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-")}-title-${index}`;
 
               return (
                 <article
-                  key={testimonial.name}
+                  key={testimonialId}
                   className="shrink-0 rounded-2xl bg-white p-8 shadow-lg transition-shadow hover:shadow-xl md:w-96"
                   aria-labelledby={testimonialId}
                 >
