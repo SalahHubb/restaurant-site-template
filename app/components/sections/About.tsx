@@ -1,8 +1,10 @@
 import Image from "next/image";
 
-import { CTA } from "@/content/site";
+import { siteData } from "@/content/site";
 
 export function About() {
+  const { section } = siteData.about;
+
   return (
     <section
       id="about"
@@ -13,8 +15,8 @@ export function About() {
         <div className="order-2 lg:order-1">
           <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-[3rem] bg-gray-900">
             <Image
-              src="https://images.unsplash.com/photo-1562059390-a761a084768e?w=800&h=800&fit=crop"
-              alt="Delicious noodles"
+              src={section.image.src}
+              alt={section.image.alt}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 480px, (min-width: 640px) 420px, 320px"
@@ -28,27 +30,21 @@ export function About() {
               id="welcome-heading"
               className="text-3xl font-bold leading-tight text-secondary sm:text-4xl lg:text-5xl"
             >
-              Welcome to Our Restaurant
+              {section.heading}
             </h2>
-            <p className="text-lg text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              diam pellentesque bibendum non dui volutpat fringilla bibendum.
-            </p>
-            <p className="text-gray-600">
-              Ullamcorper viverra ipsum nunc aliquet bibendum enim facilisis
-              gravida neque velit euismod in pellentesque.
-            </p>
+            <p className="text-lg text-gray-600">{section.lead}</p>
+            <p className="text-gray-600">{section.body}</p>
           </div>
 
           <div className="flex gap-3 sm:gap-4">
             <button className="flex-1 rounded-lg bg-secondary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-secondary/90 sm:flex-none sm:px-8 sm:py-3.5 sm:text-base">
-              {CTA.secondary}
+              {siteData.business.cta.secondary}
             </button>
             <a
-              href="#contact"
+              href={siteData.contact.href}
               className="flex-1 rounded-lg bg-primary px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-orange-600 sm:flex-none sm:px-8 sm:py-3.5 sm:text-base"
             >
-              {CTA.primary}
+              {siteData.business.cta.primary}
             </a>
           </div>
         </div>

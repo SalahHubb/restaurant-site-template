@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { CTA, SOCIALS } from "@/content/site";
+import { siteData } from "@/content/site";
 
 export function HeroSection() {
   return (
@@ -35,29 +35,31 @@ export function HeroSection() {
               id="hero-heading"
               className="text-4xl font-bold leading-tight text-secondary sm:text-5xl lg:text-6xl"
             >
-              We provide the best <span className="text-primary">food</span> for
-              you
+              {siteData.hero.heading.prefix}{" "}
+              <span className="text-primary">
+                {siteData.hero.heading.highlight}
+              </span>{" "}
+              {siteData.hero.heading.suffix}
             </h1>
             <p className="max-w-lg text-lg text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              diam pellentesque bibendum non dui volutpat fringilla bibendum.
+              {siteData.hero.description}
             </p>
           </div>
 
           <div className="flex gap-3 sm:gap-4">
             <button className="flex-1 rounded-lg bg-secondary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-secondary/90 sm:flex-none sm:px-8 sm:py-3.5 sm:text-base">
-              {CTA.secondary}
+              {siteData.business.cta.secondary}
             </button>
             <a
-              href="#contact"
+              href={siteData.contact.href}
               className="flex-1 rounded-lg bg-primary px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-orange-600 sm:flex-none sm:px-8 sm:py-3.5 sm:text-base"
             >
-              {CTA.primary}
+              {siteData.business.cta.primary}
             </a>
           </div>
 
           <div className="flex gap-4 pt-4" aria-label="Social links">
-            {SOCIALS.map((social) => (
+            {siteData.social.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
@@ -73,8 +75,8 @@ export function HeroSection() {
         <div className="relative">
           <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-[3rem] bg-gray-900">
             <Image
-              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=800&fit=crop"
-              alt="Delicious food"
+              src={siteData.hero.primaryImage.src}
+              alt={siteData.hero.primaryImage.alt}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 480px, (min-width: 640px) 420px, 320px"
@@ -83,17 +85,19 @@ export function HeroSection() {
           </div>
           <div className="absolute -bottom-8 -left-8 hidden max-w-xs rounded-2xl bg-white p-4 shadow-2xl lg:block">
             <Image
-              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=200&fit=crop"
-              alt="Healthy salad"
+              src={siteData.hero.secondaryCard.image.src}
+              alt={siteData.hero.secondaryCard.image.alt}
               width={300}
               height={200}
               className="h-32 w-full rounded-xl object-cover"
             />
             <div className="mt-3">
               <h3 className="text-lg font-semibold text-secondary">
-                Fresh Salad Bowl
+                {siteData.hero.secondaryCard.title}
               </h3>
-              <p className="text-sm text-gray-500">Healthy &amp; Delicious</p>
+              <p className="text-sm text-gray-500">
+                {siteData.hero.secondaryCard.subtitle}
+              </p>
             </div>
           </div>
         </div>

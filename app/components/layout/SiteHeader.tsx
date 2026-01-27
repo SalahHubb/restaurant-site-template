@@ -3,20 +3,21 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-import { BRAND, CTA, NAV_LINKS, NavLink } from "@/content/site";
+import { NavLink, siteData } from "@/content/site";
 
 type SiteHeaderProps = {
   navLinks?: NavLink[];
 };
 
-export function SiteHeader({ navLinks = NAV_LINKS }: SiteHeaderProps) {
+export function SiteHeader({
+  navLinks = siteData.business.navLinks,
+}: SiteHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setMobileMenuOpen((open) => !open);
   const closeMobileMenu = () => setMobileMenuOpen(false);
   const filteredLinks = navLinks.filter(
-    (link) =>
-      link.label.toLowerCase() !== "contact" && link.href !== "#contact",
+    (link) => link.href !== siteData.contact.href,
   );
 
   return (
@@ -28,12 +29,14 @@ export function SiteHeader({ navLinks = NAV_LINKS }: SiteHeaderProps) {
         <a
           className="flex items-center gap-2"
           href="/"
-          aria-label="Harbor and Hearth Kitchen home"
+          aria-label={`${siteData.business.brand.name} home`}
         >
           <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-orange-400 to-orange-600 text-xl font-bold text-white">
-            {BRAND.icon}
+            {siteData.business.brand.icon}
           </span>
-          <span className="text-xl font-bold text-secondary">{BRAND.name}</span>
+          <span className="text-xl font-bold text-secondary">
+            {siteData.business.brand.name}
+          </span>
         </a>
 
         <nav aria-label="Primary" className="hidden md:flex">
@@ -53,10 +56,10 @@ export function SiteHeader({ navLinks = NAV_LINKS }: SiteHeaderProps) {
 
         <div className="flex items-center gap-4">
           <a
-            href="#contact"
+            href={siteData.contact.href}
             className="hidden rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-orange-600 sm:block"
           >
-            Contact
+            {siteData.business.cta.primary}
           </a>
           <button
             type="button"
@@ -92,11 +95,11 @@ export function SiteHeader({ navLinks = NAV_LINKS }: SiteHeaderProps) {
               ))}
             </ul>
             <a
-              href="#contact"
+              href={siteData.contact.href}
               className="w-full rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-orange-600 sm:hidden text-center"
               onClick={closeMobileMenu}
             >
-              Contact
+              {siteData.business.cta.primary}
             </a>
           </nav>
         </div>
