@@ -11,7 +11,7 @@ export type Testimonial = {
 };
 export type Social = { label: string; href: string; Icon: ElementType };
 
-export const BRAND = { name: "Demo-restaurant", icon: "\uD83C\uDF5C" };
+export const BRAND = { name: "D-restaurant", icon: "\uD83C\uDF5C" };
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "#" },
@@ -81,7 +81,9 @@ export const SOCIALS: Social[] = [
 ];
 
 export const HELP_LINKS = ["Terms & Conditions", "Privacy"];
+
 export const POLICY_LINKS = ["Terms of Use", "Privacy Policy"];
+
 export const OPENING_HOURS = {
   weekdays: "Monday - Friday",
   weekdayHours: "8:00 am to 9:00 pm",
@@ -90,6 +92,6 @@ export const OPENING_HOURS = {
 };
 
 export const CONTACT_INFO = {
-  phone: "(555) 123-4567",
+  phone: "+251 923-4567",
   address: "128 Harbor Street, Seaside Town, CA 93900",
 };
