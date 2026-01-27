@@ -1,14 +1,8 @@
-type MapSectionProps = {
-  embedUrl: string;
-  address: string;
-  heading?: string;
-};
+import { siteData } from "@/content/site";
 
-export function MapSection({
-  embedUrl,
-  address,
-  heading = "Visit Harbor & Hearth Kitchen",
-}: MapSectionProps) {
+export function MapSection() {
+  const { embedUrl, address, heading } = siteData.map;
+
   return (
     <section aria-labelledby="map-heading" className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -23,7 +17,7 @@ export function MapSection({
         </div>
 
         <div className="relative overflow-hidden rounded-[3rem] bg-linear-to-br from-gray-900 to-gray-800">
-          <div className="relative aspect-[16/9] sm:aspect-[5/2] md:aspect-[21/9]">
+          <div className="relative aspect-video sm:aspect-5/2 md:aspect-21/9">
             <iframe
               title="Restaurant location on Google Maps"
               src={embedUrl}

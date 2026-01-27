@@ -1,16 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  devIndicators: {
-    buildActivity: false,
-  },
+  output: "export",
+
+  devIndicators: {},
+
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
+    unoptimized: true,
   },
 };
 

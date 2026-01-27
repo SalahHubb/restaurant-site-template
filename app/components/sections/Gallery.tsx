@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { DISHES } from "@/content/site";
+import { siteData } from "@/content/site";
 
 export function Gallery() {
   return (
@@ -15,16 +15,13 @@ export function Gallery() {
             id="special-dishes-heading"
             className="mb-4 text-3xl font-bold text-secondary sm:text-4xl lg:text-5xl"
           >
-            Our Special Dishes
+            {siteData.gallery.heading}
           </h2>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            diam pellentesque bibendum non dui volutpat fringilla bibendum.
-          </p>
+          <p className="text-gray-600">{siteData.gallery.description}</p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {DISHES.map((dish) => {
+          {siteData.gallery.dishes.map((dish) => {
             const dishId = `${dish.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-title`;
 
             return (
@@ -34,9 +31,9 @@ export function Gallery() {
                 aria-labelledby={dishId}
               >
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl">
-                  <div className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-white shadow-lg">
+                  {/* <div className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-white shadow-lg">
                     {dish.price}
-                  </div>
+                  </div> */}
 
                   <div className="relative aspect-square overflow-hidden">
                     <Image
@@ -55,9 +52,7 @@ export function Gallery() {
                     >
                       {dish.name}
                     </h3>
-                    <p className="text-sm text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <p className="text-sm text-gray-500">{dish.description}</p>
                   </div>
                 </div>
               </article>

@@ -1,8 +1,11 @@
 import Image from "next/image";
 
-import { TESTIMONIALS } from "@/content/site";
+import { siteData } from "@/content/site";
 
 export function TestimonialsSection() {
+  const { heading, description, items, indicatorCount } =
+    siteData.about.testimonials;
+
   return (
     <section
       id="gallery"
@@ -28,17 +31,14 @@ export function TestimonialsSection() {
             id="testimonials-heading"
             className="mb-4 text-3xl font-bold text-secondary sm:text-4xl lg:text-5xl"
           >
-            Our Happy Customers
+            {heading}
           </h2>
-          <p className="text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            diam pellentesque bibendum non dui volutpat fringilla bibendum.
-          </p>
+          <p className="text-gray-600">{description}</p>
         </div>
 
         <div className="md:overflow-x-auto md:pb-4">
           <div className="flex flex-col gap-8 md:min-w-max md:flex-row">
-            {TESTIMONIALS.map((testimonial, index) => {
+            {items.map((testimonial, index) => {
               const testimonialId = `${testimonial.name
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, "-")}-title-${index}`;
@@ -77,10 +77,7 @@ export function TestimonialsSection() {
                   </div>
 
                   <p className="mb-6 text-center leading-relaxed text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. To
-                    quo magna eget felis. Ullamcorper pretium sed erat feugiat.
-                    In hac habitasse platea dictumst. Dictum mauris lorem
-                    ultricies.
+                    {testimonial.quote}
                   </p>
 
                   <div className="text-center">
@@ -99,7 +96,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="mt-12 flex justify-center gap-2">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {Array.from({ length: indicatorCount }).map((_, index) => (
             <span
               key={`testimonial-dot-${index}`}
               className={`h-2.5 w-2.5 rounded-full transition-colors ${index === 0 ? "bg-primary" : "bg-gray-300"}`}
