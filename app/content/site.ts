@@ -20,7 +20,7 @@ export type SimpleLink = { label: string; href: string };
 
 export const siteData = {
   business: {
-    brand: { name: "D-restaurant", icon: "\uD83C\uDF5C" },
+    brand: { name: "Crave Cafe & Restaurant", icon: "\uD83C\uDF5C" },
     navLinks: [
       { label: "Home", href: "#" },
       { label: "About", href: "#about" },
@@ -175,7 +175,7 @@ export const siteData = {
   ] as SocialLink[],
   map: {
     heading: "Visit Harbor & Hearth Kitchen",
-    address: "128 Harbor Street, Seaside Town, CA 93900",
+    address: "Gabon St, Addis Ababa",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434510563!2d-122.41941568468034!3d37.774929779759454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7f0e5f43%3A0x4f6a0f0f0f0f0f0f!2sHarbor%20%26%20Hearth%20Kitchen!5e0!3m2!1sen!2sus!4v1700000000000",
   },

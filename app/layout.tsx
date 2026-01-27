@@ -10,13 +10,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://harborandhearth.example.com"),
-  title: {
-    default:
-      "Harbor & Hearth Kitchen | Coastal-inspired dining in Seaside Town",
-    template: "%s | Harbor & Hearth Kitchen",
-  },
+  title: "Crave Cafe & Restaurant | Addis Ababa",
   description:
-    "Cozy neighborhood kitchen in Seaside Town serving wood-fired mains, seasonal small plates, and craft coffee. Book a table, plan private events, or order pickup.",
+    " Experience authentic Ethiopian flavors in Addis. Enjoy a cultural dining experience.View our menu ",
   keywords: [
     "Harbor and Hearth Kitchen",
     "Seaside Town restaurant",
