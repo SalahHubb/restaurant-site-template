@@ -177,6 +177,6 @@ export const siteData = {
     heading: "Visit Harbor & Hearth Kitchen",
     address: "Gabon St, Addis Ababa",
     embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434510563!2d-122.41941568468034!3d37.774929779759454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7f0e5f43%3A0x4f6a0f0f0f0f0f0f!2sHarbor%20%26%20Hearth%20Kitchen!5e0!3m2!1sen!2sus!4v1700000000000",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.41618405334!2d38.7517237884194!3d9.008532368129035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85ecf041fa3b%3A0xbf9952c0b2e082a9!2sCrave%20Cafe%20%26%20Restaurant!5e0!3m2!1sen!2set!4v1769524524075!5m2!1sen!2set",
   },
 };
