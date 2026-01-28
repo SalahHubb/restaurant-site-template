@@ -20,7 +20,7 @@ export type SimpleLink = { label: string; href: string };
 
 export const siteData = {
   business: {
-    brand: { name: "Crave Cafe & Restaurant", icon: "\uD83C\uDF5C" },
+    brand: { name: "Hotto", icon: "\uD83C\uDF5C" },
     navLinks: [
       { label: "Home", href: "#" },
       { label: "About", href: "#about" },
