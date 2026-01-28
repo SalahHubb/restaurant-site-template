@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Brownie Time Cafe | Addis Ababa",
+  title: "AL BAIK RESTAURANT| Adama",
   description:
-    " Experience authentic Ethiopian flavors in Addis. Enjoy a cultural dining experience.View our menu ",
+    " Experience authentic Ethiopian flavors in Adama. Enjoy a cultural dining experience.View our menu ",
   keywords: [
     "Harbor and Hearth Kitchen",
     "Seaside Town restaurant",

@@ -20,7 +20,7 @@ export type SimpleLink = { label: string; href: string };
 
 export const siteData = {
   business: {
-    brand: { name: "Brownie Time Cafe", icon: "\uD83C\uDF5C" },
+    brand: { name: "AL BAIK", icon: "\uD83C\uDF5C" },
     navLinks: [
       { label: "Home", href: "#" },
       { label: "About", href: "#about" },
@@ -165,9 +165,8 @@ export const siteData = {
   },
   contact: {
     href: "#contact",
-    phone: "0977789545",
-    address:
-      "Beside Chanoly, Summit Road, On the way to Fiyel Bet, Addis Ababa",
+    phone: "0960771111",
+    address: "Adama 11 kebele Nearby Kitur 4 School, Adama",
   },
   social: [
     { label: "Facebook", href: "#", Icon: Facebook },
@@ -175,9 +174,9 @@ export const siteData = {
     { label: "Twitter", href: "#", Icon: Twitter },
   ] as SocialLink[],
   map: {
-    heading: "Beside Chanoly, Summit Road, On the way to ",
-    address: "Fiyel Bet, Addis Ababa",
+    heading: "Adama 11 kebele Nearby  ",
+    address: "Kitur 4 School, Adama",
     embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.273714237574!2d38.84098404545062!3d9.011798349729167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9be1455a84a5%3A0x82f3036db3a8758!2sBrownie%20Time%20Cafe!5e0!3m2!1sen!2set!4v1769603333675!5m2!1sen!2set",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15782.29166593225!2d39.26864934539101!3d8.540775683900337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b21fe2c5899ab%3A0x353cc0159cbdef1!2sAL%20BAIK%20ADAMA%20RESTAURANT!5e0!3m2!1sen!2set!4v1769612456003!5m2!1sen!2set",
   },
 };
