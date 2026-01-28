@@ -31,10 +31,6 @@ export function Gallery() {
                 aria-labelledby={dishId}
               >
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl">
-                  {/* <div className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-white shadow-lg">
-                    {dish.price}
-                  </div> */}
-
                   <div className="relative aspect-square overflow-hidden">
                     <Image
                       src={dish.image}
