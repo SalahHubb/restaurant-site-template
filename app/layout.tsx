@@ -9,7 +9,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://harborandhearth.example.com"),
   title: "Crave Cafe & Restaurant | Addis Ababa",
   description:
     " Experience authentic Ethiopian flavors in Addis. Enjoy a cultural dining experience.View our menu ",
