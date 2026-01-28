@@ -20,7 +20,7 @@ export type SimpleLink = { label: string; href: string };
 
 export const siteData = {
   business: {
-    brand: { name: "Hotto", icon: "\uD83C\uDF5C" },
+    brand: { name: "Brownie Time Cafe", icon: "\uD83C\uDF5C" },
     navLinks: [
       { label: "Home", href: "#" },
       { label: "About", href: "#about" },
@@ -165,8 +165,9 @@ export const siteData = {
   },
   contact: {
     href: "#contact",
-    phone: "+251 923-4567",
-    address: "128 Harbor Street, Seaside Town, CA 93900",
+    phone: "0977789545",
+    address:
+      "Beside Chanoly, Summit Road, On the way to Fiyel Bet, Addis Ababa",
   },
   social: [
     { label: "Facebook", href: "#", Icon: Facebook },
@@ -174,9 +175,9 @@ export const siteData = {
     { label: "Twitter", href: "#", Icon: Twitter },
   ] as SocialLink[],
   map: {
-    heading: "Visit Harbor & Hearth Kitchen",
-    address: "Gabon St, Addis Ababa",
+    heading: "Beside Chanoly, Summit Road, On the way to ",
+    address: "Fiyel Bet, Addis Ababa",
     embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.41618405334!2d38.7517237884194!3d9.008532368129035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85ecf041fa3b%3A0xbf9952c0b2e082a9!2sCrave%20Cafe%20%26%20Restaurant!5e0!3m2!1sen!2set!4v1769524524075!5m2!1sen!2set",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.273714237574!2d38.84098404545062!3d9.011798349729167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9be1455a84a5%3A0x82f3036db3a8758!2sBrownie%20Time%20Cafe!5e0!3m2!1sen!2set!4v1769603333675!5m2!1sen!2set",
   },
 };

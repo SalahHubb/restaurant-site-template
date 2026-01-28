@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Crave Cafe & Restaurant | Addis Ababa",
+  title: "Brownie Time Cafe | Addis Ababa",
   description:
     " Experience authentic Ethiopian flavors in Addis. Enjoy a cultural dining experience.View our menu ",
   keywords: [
